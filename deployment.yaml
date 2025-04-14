@@ -24,6 +24,15 @@ spec:
                     values:
                       - e2e-az1
                       - e2e-az2
+      tolerations:
+        - key: "key1"
+          operator: "Equal"
+          value: "value1"
+          effect: "NoSchedule"
+        - key: "key2"
+          operator: "Exists"
+          effect: "NoExecute"
+          tolerationSeconds: 3600
       containers:
         - name: example-container
           image: nginx:1.21
