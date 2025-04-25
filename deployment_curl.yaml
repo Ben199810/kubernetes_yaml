@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: curl-test
+  namespace: test
+  labels:
+    app: curl-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: curl-test
+  template:
+    metadata:
+      labels:
+        app: curl-test
+    spec:
+      containers:
+        - name: alpine
+          image: ben199810/alpine-tool:20250424
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
