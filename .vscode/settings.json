@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.yaml": "yaml"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
+}
